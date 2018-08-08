@@ -20,11 +20,11 @@ module.exports = {
     port: 80,
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
         loaders: ['style-loader','css-loader']
-      }
+      },
       {
         test: /\.js?/,
         exclude: '/node_modules/',
@@ -32,7 +32,7 @@ module.exports = {
         options: {
           presets:['env','react']
         }
-      }
+      },
       {
         test: /\.png$/,
         use: "url-loader?limit=100000"
@@ -40,7 +40,7 @@ module.exports = {
       {
         test: /\.jpg$/,
         use: "file-loader"
-      }
+      },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         use: 'url-loader? limit=10000&mimetype=application/font-woff'
